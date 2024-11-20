@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "ApiHubContextExample";
+}
+@section Scripts{
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            
+            const connection = new signalR.HubConnectionBuilder()
+                .withUrl("https://localhost:7018/myHub")
+                .configureLogging(signalR.LogLevel.Information)
+                .build();
+
+            async function start() {
+                try {
+                    await connection.start();
+                    console.log("Connected To Hub");
+                } catch (err) {
+                    console.error("Error while starting connection: ", err);
+                    setTimeout(start, 3000);
+                }
+            }
+
+            connection.onclose(async () => {
+                await start();
+            });
+
+
+            connection.on("ReceiveMessageForAllClients", (message) => {
+                console.log("Received Message From API Hub : ", message);
+            });
+
+            start();
+
+            document.getElementById("btn").addEventListener("click", function () {
+                const message = "Hello World!";
+                connection.invoke("BroadcastMessageToAllClients", message)
+                    .catch(err => {
+                        console.error("Error: ", err);
+                    });
+                console.log("Message sent successfully");
+            });
+        })
+
+
+    </script>
+}
+<h1>ApiHubContextExample</h1>
+<button id="btn" class="btn btn-primary">Send Message To API(client-hub)</button>

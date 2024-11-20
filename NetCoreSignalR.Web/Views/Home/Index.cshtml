@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@section Scripts
+{
+    <script src="~/js/signalr-client.js"></script>
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div id="connectionId" class="alert alert-primary" role="alert">
+                
+            </div>
+            <button type="button" class="btn btn-success mx-1 my-1">
+                Connected Client Count <span id="span-connected-client-count" class="badge text-bg-secondary">4</span>
+            </button>
+            <button type="button" class="btn btn-primary mx-1 my-1" id="btn-send-message-all-client">Send Message To All Clients</button>
+            <button type="button" class="btn btn-warning mx-1 my-1" id="btn-send-product-all-client">Send Product To All Clients</button>
+            <button type="button" class="btn btn-primary mx-1 my-1" id="btn-send-message-specified-client">Send Message To Specified Client</button>
+            <button type="button" class="btn btn-primary mx-1 my-1" id="btn-send-message-other-client">Send Message To Other Clients</button>
+            
+            <div>
+                <hr />
+                <input type="text" class="form-control mx-1 my-1" id="text-connectionId" placeholder="Connection Id">
+                <button type="button" class="btn btn-primary mx-1 my-1" id="btn-send-message-indivual-client">Send Message To Indivual Client</button>
+            </div>
+            
+            <div>
+                <hr />
+                <br />
+                <div id="groupList" class="alert alert-primary" role="alert"></div>
+                <button type="button" class="btn btn-primary mx-1 my-1" id="btn-add-groupA">Join Group A</button>
+                <button type="button" class="btn btn-primary mx-1 my-1" id="btn-remove-groupA">Leave Group A</button>
+                <button type="button" class="btn btn-primary mx-1 my-1" id="btn-add-groupB">Join Group B</button>
+                <button type="button" class="btn btn-primary mx-1 my-1" id="btn-remove-groupB">Leave Group B</button>
+                <button type="button" class="btn btn-primary mx-1 my-1" id="btn-send-message-groupA">Send Message Group A</button>
+                <button type="button" class="btn btn-primary mx-1 my-1" id="btn-send-message-groupB">Send Message Group B</button>
+            </div>
+
+
+        </div>
+    </div>
+</div>

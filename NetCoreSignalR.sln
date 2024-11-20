@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreSignalR.Web", "NetCoreSignalR.Web\NetCoreSignalR.Web.csproj", "{FC29D8E4-7152-4256-84EC-A370DA645A38}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetSignalRClient.ConsoleApp", "NetSignalRClient.ConsoleApp\NetSignalRClient.ConsoleApp.csproj", "{80479F54-C0E7-47EA-8DDB-FB46899A3C9F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreSignalRClient.WorkerServiceApp", "NetCoreSignalRClient.WorkerServiceApp\NetCoreSignalRClient.WorkerServiceApp.csproj", "{350B9CA6-21EB-49AE-8D54-C1EEB785AB0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreSignalR.API", "NetCoreSignalR.API\NetCoreSignalR.API.csproj", "{22EEFAB2-38D6-4313-88EE-0568FB196062}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC29D8E4-7152-4256-84EC-A370DA645A38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC29D8E4-7152-4256-84EC-A370DA645A38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC29D8E4-7152-4256-84EC-A370DA645A38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC29D8E4-7152-4256-84EC-A370DA645A38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80479F54-C0E7-47EA-8DDB-FB46899A3C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80479F54-C0E7-47EA-8DDB-FB46899A3C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80479F54-C0E7-47EA-8DDB-FB46899A3C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80479F54-C0E7-47EA-8DDB-FB46899A3C9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{350B9CA6-21EB-49AE-8D54-C1EEB785AB0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{350B9CA6-21EB-49AE-8D54-C1EEB785AB0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{350B9CA6-21EB-49AE-8D54-C1EEB785AB0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{350B9CA6-21EB-49AE-8D54-C1EEB785AB0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22EEFAB2-38D6-4313-88EE-0568FB196062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22EEFAB2-38D6-4313-88EE-0568FB196062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22EEFAB2-38D6-4313-88EE-0568FB196062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22EEFAB2-38D6-4313-88EE-0568FB196062}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F14FC814-034C-435E-A932-EBC3F0A664B0}
+	EndGlobalSection
+EndGlobal
