@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "SignUp";
+}
+
+@model SignUpViewModel
+<div class="row">
+    <div class="col-md-4 col offset-4">
+        <form asp-controller="Home" asp-action="SignUp" method="post">
+            <h2>SignUp</h2>
+            <hr />
+            <div asp-validation-summary="All"></div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PasswordConfirm"></label>
+                <input asp-for="PasswordConfirm" class="form-control">
+                <span asp-validation-for="PasswordConfirm" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary my-2">Create User</button>
+        </form>
+    </div>
+</div>
