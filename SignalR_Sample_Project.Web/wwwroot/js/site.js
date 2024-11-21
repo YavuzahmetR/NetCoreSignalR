@@ -1,4 +1,19 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿var toastSetTimeOut;
 
-// Write your JavaScript code.
+$(document).ready(function () {
+
+    const connection = new window.signalR.HubConnectionBuilder().withUrl("/hub").build();
+
+    connection.start().then(() => { console.log("Connection Established") });
+
+    connection.on("AlertCompleteDownloadFile", (downloadPath) => {
+
+        clearTimeout(toastSetTimeOut);
+
+        $(".toast-body").html(`<p>Your Excel creation process is completed, please download the file from the link below.</p>
+        <a href="${downloadPath}">Download</a>
+        `);
+        $("#liveToast").show();
+    })
+
+})
